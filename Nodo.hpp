@@ -1,12 +1,13 @@
 #ifndef METODOSNUMERICOS
 #define METODOSNUMERICOS
-
 class Nodo{
 	public:
+		Nodo(); //Constructor por defecto
+		Nodo(int); //Sobrecargando constructor
+	private:
 		int key;
 		Nodo *next;
-		Nodo(); //Constructor por defecto
-		Nodo(int); //Sobrecargando constructor	
-};
 
+	friend class Lista;
+};
 #endif
