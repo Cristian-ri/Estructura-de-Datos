@@ -8,6 +8,15 @@ Lista::Lista(){
 	this->head = 0;
 }
 
+void Lista::pushfront(int _key){
+	//Crando un nodo O(1)
+	Nodo *nuevoNodo = new Nodo(_key);
+	//NuevoNodo apuntnado al siguiente O(1)
+	nuevoNodo->next = this->head;
+	//Nodo head apuntando al primer elemento O(1)
+	this->head  = nuevoNodo;
+}
+
 void Lista::imprimir(){
 	Nodo *iterador;
 	iterador = this->head;
@@ -16,15 +25,6 @@ void Lista::imprimir(){
 		cout<<iterador->key<<endl;
 		iterador = iterador->next;
 	}
-}
-
-void Lista::pushfront(int _key){
-	//Crando un nodo O(1)
-	Nodo *nuevoNodo = new Nodo(_key);
-	//NuevoNodo apuntnado al siguiente O(1)
-	nuevoNodo->next = this->head;
-	//Nodo head apuntando al primer elemento O(1)
-	this->head  = nuevoNodo;
 }
 
 int Lista::popfront(){
