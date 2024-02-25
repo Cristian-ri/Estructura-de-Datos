@@ -1,7 +1,9 @@
+#include "Lista.hpp"
 #include <iostream>
 using std::cout;
 using std::cin;
 using std::endl;
+
 #ifndef NODO
 #define NODO
 //Clase autoreferenciada

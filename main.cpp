@@ -1,8 +1,10 @@
 #include "Lista.hpp"
-#include<iostream>
+#include <iostream>
 using std::cout;
 using std::cin;
 using std::endl;
+
+using namespace std;
 
 int main(int argc, char** argv){
 	//Instanciando un ojeto de la clase lista
