@@ -2,7 +2,6 @@
 using std::cout;
 using std::cin;
 using std::endl;
-using std::ostream;
 #ifndef VECTOR
 #define VECTOR
 
@@ -15,13 +14,14 @@ class Vector{
 		//Mostrar vector
 		Vector imprimir();
 		//Funciones miembros set "obtener"
-		void setV(const int);
-		void setDim(const int);
+		void setv(const int);
+		void setdim(const int);
 		//Funciones miembros get "retornar"
-		const int getV()const;
-		const int getDim()const;
-		//función que permita inserta el elemento en una posición.
-		
+		const int getv()const;
+		const int getdim()const;
+		//Insertar un elemento al inicio del vector
+		Vector pushfront(const Vector &,const int);
+				
 	private:
 		int *v;
 		int dim;
