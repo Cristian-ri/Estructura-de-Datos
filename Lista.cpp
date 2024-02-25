@@ -1,4 +1,9 @@
 #include "Lista.hpp"
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+
 Lista::Lista(){
 	this->head = 0;
 }
