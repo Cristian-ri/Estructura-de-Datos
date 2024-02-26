@@ -8,6 +8,7 @@ class Nodo{
 		Nodo(int); //Sobrecargando constructor
 		friend class Lista;
 		friend class Listacola;
+		friend class Listadoble;
 	private:
 		int key;
 		Nodo *back;
