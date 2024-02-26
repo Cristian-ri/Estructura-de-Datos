@@ -49,3 +49,29 @@ void Listacola::pushback(int _key){
    //4
     this->tail = nuevonodo;
 }
+
+bool Listacola::empty(){
+	return this->head == nullptr;
+}
+
+int Listacola::popfront(){
+	if (head==nullptr)
+   {
+    	cout<<"la lista esta vacia"<<endl;
+   }
+	int dato = head->key;
+   	this->head = head->next;
+	return dato;
+}
+
+int Listacola::popback(){
+	if (head==nullptr)
+   {
+    	cout<<"la lista esta vacia"<<endl;
+   }
+   
+	int dato = tail->key;
+    this->tail = nullptr;
+    return dato;
+}
+
