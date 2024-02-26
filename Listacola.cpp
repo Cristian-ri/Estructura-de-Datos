@@ -69,9 +69,21 @@ int Listacola::popback(){
    {
     	cout<<"la lista esta vacia"<<endl;
    }
-   
-	int dato = tail->key;
-    this->tail = nullptr;
-    return dato;
+   	Nodo *iterador  = this->head;
+	Nodo *aux;
+	int dato = 0;
+	/*La condicion se agrega para tomar el caso 
+	que la lista solo tenga un elemento o este vacia*/
+	if(head != NULL){
+		//Buscar el ultimo elemento o nodo O(1)
+		while(iterador->next != NULL){
+			//Esta operacion O(1)
+			aux = iterador;
+			iterador = iterador->next;
+			dato = iterador->key;
+		}
+	} 
+	aux->next = NULL;
+	return dato;
 }
 
