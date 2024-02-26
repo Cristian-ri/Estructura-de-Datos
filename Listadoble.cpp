@@ -31,10 +31,6 @@ void Listadoble::pushfront(int _key){
 }
 
 void Listadoble::pushback(int _key) {
-    if (head == nullptr) {
-        cout << "La lista esta vacia" << endl;
-    }
-    
     Nodo* nuevonodo = new Nodo(_key);
     nuevonodo->key = _key;
     nuevonodo->next = nullptr;
@@ -50,3 +46,32 @@ void Listadoble::pushback(int _key) {
     }
 }
 
+int Listadoble::popfront(){
+	if (head == nullptr) {
+        cout << "La lista esta vacia" << endl;
+    }
+    
+    int dato = head->key;
+    this->head = head->next;
+    return dato;
+}
+
+int Listadoble::popback(){
+	if (head == nullptr) {
+        cout << "La lista esta vacia" << endl;
+    }
+    int dato  = 0;
+    if(this->head == this->tail){
+    	this->tail = nullptr;
+    	this->head = nullptr;
+	}
+	else{
+		tail->back = tail;
+		tail->next = nullptr;
+	}
+	return dato;
+}
+
+
+
+ 

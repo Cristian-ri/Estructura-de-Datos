@@ -58,7 +58,16 @@ int main(int argc, char** argv){
 	cout<<"**********************"<<endl;
 	l3.pushback(120);
 	l3.pushback(125);
+	l3.pushback(134);
+	l3.pushback(150);
 	l3.Imprimir();
+	cout<<"**********************"<<endl;
+	l3.popfront();
+	l3.Imprimir();
+	cout<<"**********************"<<endl;
+	l3.popback();
+	l3.Imprimir();
+	
 	
 	return 0;	
 }
