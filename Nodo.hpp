@@ -7,6 +7,7 @@ class Nodo{
 		Nodo(); //Constructor por defecto
 		Nodo(int); //Sobrecargando constructor
 		friend class Lista;
+		friend class Listacola;
 	private:
 		int key;
 		Nodo *next;
