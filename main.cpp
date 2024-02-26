@@ -37,7 +37,7 @@ int main(int argc, char** argv){
 	l2._imprimir();
 	cout<<"**********************"<<endl;
 	l2.pushback(80);
-	l2.pushback(87);
+	l2.pushback(85);
 	l2._imprimir();
 	
 }

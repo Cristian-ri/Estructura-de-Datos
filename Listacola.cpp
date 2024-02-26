@@ -5,8 +5,8 @@ using std::cin;
 using std::endl;
 
 Listacola::Listacola(){
-	this->head = 0;
-	this->tail = 0;
+	this->head = nullptr;
+	this->tail = nullptr;
 }
 
 void Listacola::_imprimir(){
@@ -32,17 +32,20 @@ void Listacola::pushfront(int _key){
 
 void Listacola::pushback(int _key){
 	//verifica que la lista este vacia
-	if(head == NULL){
+	if(head == nullptr){
 		cout<<"La listacola esta vacia"<<endl;
 	}
-	
+	//1
 	Nodo *nuevonodo = new Nodo(_key);
-	nuevonodo->next = this->tail;
-	this->tail = nuevonodo;
-	
-	if(this->tail != this->head){
-		nuevonodo = this->tail;
-		this->tail = this->head;
-	}
-	
+	//2
+	nuevonodo->next = nullptr;
+	//En el caso de que solo este un elemento
+	//en la lista 
+	if (this->tail != this->head) {
+		//3
+        this->tail->next = nuevonodo;
+    }
+
+   //4
+    this->tail = nuevonodo;
 }
