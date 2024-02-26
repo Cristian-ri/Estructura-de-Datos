@@ -10,6 +10,7 @@ class Nodo{
 		friend class Listacola;
 	private:
 		int key;
+		Nodo *back;
 		Nodo *next;
 };
 #endif
